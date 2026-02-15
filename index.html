@@ -3,64 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zubní ordinace DentCare</title>
+<title>DentCare | Moderní zubní ordinace</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #f4f9fb;
   color: #333;
+  scroll-behavior: smooth;
 }
 
+/* NAVBAR */
 nav {
-  background: #0a3d62;
+  background: white;
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav a {
-  color: white;
+  color: #0984e3;
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #0652DD;
+}
+
+/* HERO */
 header {
+  height: 90vh;
   background: linear-gradient(135deg,#74b9ff,#0984e3);
   color: white;
-  text-align: center;
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease;
 }
 
-section {
-  padding: 60px 20px;
-  text-align: center;
+header h1 {
+  font-size: 48px;
+  margin: 0;
 }
 
-.services div {
-  margin: 20px 0;
+header p {
+  font-size: 20px;
+  margin: 15px 0;
 }
 
 button {
-  padding: 12px 25px;
-  background: #0984e3;
-  color: white;
+  padding: 14px 30px;
+  background: white;
+  color: #0984e3;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 30px;
   font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #0652DD;
+  transform: scale(1.1);
+  background: #dfe6e9;
 }
 
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FOOTER */
 footer {
   background: #0a3d62;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* ANIMACE */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* MOBIL */
+@media (max-width: 768px) {
+  header h1 { font-size: 32px; }
+  .cards { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
@@ -74,38 +131,39 @@ footer {
 </nav>
 
 <header>
-  <h1>Zubní ordinace DentCare 🦷</h1>
-  <p>Kvalitní péče o váš úsměv</p>
-  <br>
-  <button onclick="alert('Pro objednání volejte 777 123 456')">
+  <h1>DentCare 🦷</h1>
+  <p>Moderní péče o váš úsměv</p>
+  <button onclick="alert('Objednejte se na 777 123 456')">
     Objednat se
   </button>
 </header>
 
-<section id="sluzby" class="services">
+<section id="sluzby">
   <h2>Naše služby</h2>
-  <div>✔ Preventivní prohlídky</div>
-  <div>✔ Dentální hygiena</div>
-  <div>✔ Bělení zubů</div>
-  <div>✔ Zubní implantáty</div>
+  <div class="cards">
+    <div class="card">✔ Preventivní prohlídky</div>
+    <div class="card">✔ Dentální hygiena</div>
+    <div class="card">✔ Bělení zubů</div>
+    <div class="card">✔ Implantáty</div>
+  </div>
 </section>
 
 <section id="cenik">
   <h2>Ceník</h2>
-  <p>Vstupní vyšetření: 800 Kč</p>
-  <p>Hygiena: 1500 Kč</p>
-  <p>Bělení zubů: 4000 Kč</p>
+  <p>Vstupní vyšetření – 800 Kč</p>
+  <p>Hygiena – 1500 Kč</p>
+  <p>Bělení – 4000 Kč</p>
 </section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>Adresa: Hlavní 123, Praha</p>
-  <p>Telefon: 777 123 456</p>
-  <p>Email: info@dentcare.cz</p>
+  <p>📍 Hlavní 123, Praha</p>
+  <p>📞 777 123 456</p>
+  <p>✉ info@dentcare.cz</p>
 </section>
 
 <footer>
-  © 2026 DentCare | Všechna práva vyhrazena
+  © 2026 DentCare | Moderní zubní ordinace
 </footer>
 
 </body>
