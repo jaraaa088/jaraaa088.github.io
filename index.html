@@ -81,31 +81,20 @@ section {
   text-align: center;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 25px;
-  width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
 /* NOVÁ TŘÍDA PRO ZVÝRAZNĚNÉ PÍSMO/ŘÁDKY */
 .zvyrazneni {
   font-weight: bold !important;
   color: #0a3d62 !important;
   background-color: #e3f2fd !important; /* Světle modré podbarvení */
+}
+
+/* SEKCE KONTAKT */
+#kontakt {
+  background: #ffffff;
+}
+#kontakt p {
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 /* FOOTER */
@@ -125,17 +114,17 @@ footer {
 /* MOBIL */
 @media (max-width: 768px) {
   header h1 { font-size: 32px; }
-  .cards { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ZDE JE UPRAVENÉ MENU -->
+<!-- UPRAVENÉ MENU S KONTAKTEM -->
 <nav>
   <a href="#ord-hodiny">Ordinační hodiny</a>
   <a href="#cenik">Ceník</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
 
 <header>
@@ -297,7 +286,7 @@ footer {
       <tr><td style='padding:8px;border:1px solid #ddd'></td><td style='padding:8px;border:1px solid #ddd'>cementování uvolněné korunky</td><td style='padding:8px;border:1px solid #ddd'>300</td><td style='padding:8px;border:1px solid #ddd'>300</td></tr>
       <tr><td style='padding:8px;border:1px solid #ddd'></td><td style='padding:8px;border:1px solid #ddd'>cementování uvolněného můstku</td><td style='padding:8px;border:1px solid #ddd'>500</td><td style='padding:8px;border:1px solid #ddd'>500</td></tr>
       
-      <!-- KATEGORIE: VÝPLNĚ -->
+      <!-- KATEGORIE: VÝPLNÊ -->
       <tr class="zvyrazneni">
         <td style='padding:8px;border:1px solid #ddd'></td>
         <td style='padding:8px;border:1px solid #ddd'>VÝPLNĚ A OŠETŘENÍ</td>
@@ -312,7 +301,7 @@ footer {
       <tr><td style='padding:8px;border:1px solid #ddd'></td><td style='padding:8px;border:1px solid #ddd'>2 plošky kompozit</td><td style='padding:8px;border:1px solid #ddd'>1100</td><td style='padding:8px;border:1px solid #ddd'>2000</td></tr>
       <tr><td style='padding:8px;border:1px solid #ddd'></td><td style='padding:8px;border:1px solid #ddd'>3 plošky kompozit</td><td style='padding:8px;border:1px solid #ddd'>1500</td><td style='padding:8px;border:1px solid #ddd'>2400</td></tr>
       
-      <!-- KATEGORIE: BĚLENÍ -->
+      <!-- KATEGORIE: BÊLENÍ -->
       <tr class="zvyrazneni">
         <td style='padding:8px;border:1px solid #ddd'></td>
         <td style='padding:8px;border:1px solid #ddd'>BĚLENÍ</td>
@@ -372,10 +361,17 @@ footer {
   </div>
 </section>
 
+<!-- NOVÁ SEKCE KONTAKT -->
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>📍 Poliklinika Husova 898, Náměšť nad Oslavou</p>
+  <p>📞 568 620 041</p>
+  <p>✉ <a href="mailto:d.syrova@post.cz" style="color: #0984e3; text-decoration: none;">d.syrova@post.cz</a></p>
+</section>
+
 <footer>
   <p>&copy; 2026 MUDr. Dana Augustinová | Moderní zubní ordinace</p>
 </footer>
 
 </body>
-</html>
 </html>
